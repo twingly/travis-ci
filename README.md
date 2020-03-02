@@ -13,9 +13,10 @@ version: ~> 1.0
 Then just include the config(s) you want, for example:
 
 ```yml
-import: twingly/travis-ci:config/notifications.yml@master
-import: twingly/travis-ci:config/ubuntu.yml@master
-import: twingly/travis-ci:config/ruby.yml@master
+import:
+  - twingly/travis-ci:config/notifications.yml@master
+  - twingly/travis-ci:config/ubuntu.yml@master
+  - twingly/travis-ci:config/ruby.yml@master
 ```
 
 [Build Config Imports]: https://docs.travis-ci.com/user/build-config-imports/
