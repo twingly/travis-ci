@@ -1,0 +1,14 @@
+before_script:
+  - echo "Wait for MySQL"
+  - >
+    export tries=0;
+    export max_tries=60;
+    while [[ true ]]; do
+      tries=$((tries + 1));
+      echo "Waiting for MySQL... [$tries]";
+      sleep 2;
+      mysqladmin ping --host 127.0.0.1 &> /dev/null
+      look_exit=$?;
+      if [[ "$look_exit" = "0" ]]; then echo "MySQL ready"; break; fi;
+      if [[ "$tries" -ge "$max_tries" ]]; then echo "MySQL did not start in time"; exit 1; break; fi;
+    done;
