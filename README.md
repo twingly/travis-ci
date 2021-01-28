@@ -1,3 +1,9 @@
+# Repository archived ☠️
+
+We have stopped using Travis CI. Our projects now use [GitHub Actions](https://github.com/features/actions) instead.
+
+---
+
 # Travis CI
 
 Repository used for [sharing Travis CI build configs][Build Config Imports] across repos.
